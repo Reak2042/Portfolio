@@ -1,0 +1,262 @@
+Analyzed SKILL.md:L1-139
+
+**HTML (single file with embedded CSS & JS)**  
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reak – Data Science & Engineering Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --bg-color: #fafafa;
+        --text-color: #222;
+        --accent-blue: #1e3a8a;
+        --accent-green: #10b981;
+        --max-width: 1100px;
+        --font-sans: 'Inter', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+        font-family:var(--font-sans);
+        background:var(--bg-color);
+        color:var(--text-color);
+        line-height:1.6;
+    }
+    a{color:var(--accent-blue);text-decoration:none}
+    a:hover{color:var(--accent-green);text-decoration:underline}
+    header{
+        background:white;
+        position:sticky;
+        top:0;
+        z-index:1000;
+        box-shadow:0 2px 4px rgba(0,0,0,.05);
+    }
+    .nav-container{
+        max-width:var(--max-width);
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:1rem;
+    }
+    .nav-links a{
+        margin-left:1.5rem;
+        font-weight:600;
+    }
+    section{padding:4rem 1rem}
+    .wrapper{max-width:var(--max-width);margin:auto}
+    /* HERO */
+    .hero{display:flex;flex-wrap:wrap;gap:2rem;align-items:center}
+    .hero-text{flex:1 1 300px}
+    .hero h1{font-size:2.5rem;color:var(--accent-blue);margin-bottom:.5rem}
+    .hero h2{font-size:1.5rem;color:#555;margin-bottom:1rem}
+    .hero .img-placeholder{
+        flex:1 1 300px;
+        height:250px;
+        background:#ddd;
+        border:2px dashed #bbb;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#777;
+        font-style:italic;
+    }
+    /* PROJECTS */
+    .projects{background:white;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+    .project-item{
+        display:flex;flex-wrap:wrap;gap:1.5rem;padding:2rem;
+        border-bottom:1px solid #eee;
+    }
+    .project-item:last-child{border:none}
+    .project-content{flex:1 1 300px}
+    .project-img{
+        flex:1 1 300px;
+        height:180px;
+        background:#ddd;
+        border:2px dashed #bbb;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#777;
+        font-style:italic;
+    }
+    .tags{margin-top:.5rem;font-size:.9rem;color:#555}
+    /* EXPERIENCE & AWARDS */
+    .timeline{
+        display:flex;flex-direction:column;gap:2rem;
+    }
+    .timeline-item{
+        background:white;
+        padding:2rem;
+        border-left:4px solid var(--accent-blue);
+        position:relative;
+    }
+    .timeline-item::before{
+        content:"";
+        width:12px;height:12px;
+        background:var(--accent-green);
+        border-radius:50%;
+        position:absolute;
+        left:-8px;top:2rem;
+    }
+    .timeline-img{
+        width:120px;height:120px;
+        background:#ddd;
+        border:2px dashed #bbb;
+        margin-top:.5rem;
+        display:flex;align-items:center;justify-content:center;
+        color:#777;font-style:italic;
+    }
+    /* FOOTER */
+    footer{
+        background:#1e3a8a;color:white;text-align:center;padding:2rem 1rem;
+    }
+    .footer-links a{
+        margin:0 .5rem;
+        color:white;
+        font-weight:600;
+    }
+    /* RESPONSIVE */
+    @media (max-width:768px){
+        .hero, .project-item{
+            flex-direction:column;
+            text-align:center;
+        }
+        .nav-links a{margin-left:.8rem}
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo"><strong>Reak</strong></div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#awards">Awards</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="about" class="hero wrapper">
+    <div class="hero-text">
+        <h1>Hi, I’m Reak.</h1>
+        <h2>Data Science &amp; Engineering Student | AI App Developer</h2>
+        <p>I am a Data Science and Engineering student at the Royal University of Phnom Penh. I specialize in building practical AI applications,
+        designing automated business reports, and turning raw data into actionable insights. My focus is on bridging the gap between
+        theoretical machine learning and real‑world business intelligence.</p>
+    </div>
+    <div class="img-placeholder">Profile Image</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects wrapper">
+    <h2 style="margin-bottom:2rem;color:var(--accent-blue);text-align:center;">Featured Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project-item">
+        <div class="project-content">
+            <h3>Khmer AI Lab Result Explainer</h3>
+            <p>I built this web application to help patients understand their medical lab results in plain Khmer. The app processes complex medical terminology and outputs easy‑to‑read explanations. I developed it using Google AI Studio and the Gemini API, starting with a Streamlit prototype before moving to a fully hosted web app.</p>
+            <div class="tags">Python, Gemini API, Google AI Studio, Streamlit</div>
+        </div>
+        <div class="project-img">Image goes here</div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-item">
+        <div class="project-content">
+            <h3>Skincare AI Recommender</h3>
+            <p>This recommendation engine matches users with skincare products based on their unique skin profiles. Users upload a photo, and the app uses Gemini vision to score specific skin concerns. A Python backend then ranks matches from a dataset of over 900 Korean skincare products. Finally, the AI generates a custom explanation of why the top products fit the user.</p>
+            <div class="tags">Python, Gemini Vision, FastAPI, Data Structuring</div>
+        </div>
+        <div class="project-img">Image goes here</div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-item">
+        <div class="project-content">
+            <h3>Business Intelligence at Cocoonin</h3>
+            <p>To optimize retail operations, I built a structured reporting pipeline from scratch for a local cosmetics business. I use Python, pandas, and matplotlib to analyze monthly revenue, track purchasing behaviors, and generate highly visual, color‑coded sales reports. This work applies academic data science directly to live retail data.</p>
+            <div class="tags">Python, Pandas, Matplotlib, Data Visualization, Excel</div>
+        </div>
+        <div class="project-img">Image goes here</div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-item">
+        <div class="project-content">
+            <h3>Etjaycycle Concept</h3>
+            <p>Etjaycycle is a platform concept designed to act as an “Uber for Recycling” in Phnom Penh. It connects households with informal scrap collectors, streamlining pickup requests and providing quantity‑based cash estimates. The model includes route optimization and a GreenPoints reward system to support sustainable revenue and public health.</p>
+            <div class="tags">Product Management, System Design, Green Tech</div>
+        </div>
+        <div class="project-img">Image goes here</div>
+    </div>
+</section>
+
+<!-- EXPERIENCE & AWARDS -->
+<section id="awards" class="wrapper">
+    <h2 style="margin-bottom:2rem;color:var(--accent-blue);text-align:center;">Experience &amp; Awards</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>Champion – MIS Datazone 2026 Competition</h3>
+            <p>I led a data‑driven solution that won the competition by delivering a clear, actionable dashboard for municipal services.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Winner – Healthcare AI Hackathon (Build With AI)</h3>
+            <p>My team created a rapid‑prototype AI tool that predicts patient readmission risk using electronic health records.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Participant – Digital and Green Innovation – Youth Cohort (DGIy)</h3>
+            <p>Focused on sustainable tech ideas and presented a prototype for eco‑friendly waste collection.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Operations &amp; Data Assistant at Cocoonin</h3>
+            <p>Supported daily operations, built data pipelines, and visualized sales performance for the cosmetics retailer.</p>
+            <div class="timeline-img">Event Photo</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="wrapper" style="text-align:center;">
+    <h2 style="color:var(--accent-blue);margin-bottom:1rem;">Let’s connect and build something.</h2>
+    <p>
+        <a href="https://github.com/Reak2042" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/reak2042" target="_blank">LinkedIn</a> |
+        <a href="mailto:reak@example.com">Email</a>
+    </p>
+</section>
+
+<footer>
+    © 2026 Reak – All Rights Reserved
+</footer>
+
+<script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({behavior: 'smooth'});
+            }
+        });
+    });
+</script>
+</body>
+</html>
+```
